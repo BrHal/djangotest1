@@ -28,6 +28,7 @@ print(
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
  <head>
   <title>eCarnet - Employés</title>
+  <link href="/css/topcoat-desktop-light.min.css" rel="stylesheet"/>
  </head>
  <body>
   <h1>Bienvenue sur l'eCarnet</h1>
@@ -52,7 +53,21 @@ print(
     """    </select>
     <input type="submit" value="Lister"/>
    </p>
-  </form>  
+  </form>""")
+print("""  <h2>Ajouter un nouvel employé</h2>
+  <form action="cgi-test3-sql.py" method="get">
+   <p>Prénom : <input type="text" name="first_name"/></p>
+   <p>Nom : <input type="text" name="name"/></p>
+   <p>Matricule : <input type="text" name="registration_number"/></p>
+   <p>Tél. fixe : <input type="text" name="home_phone_number"/></p>
+   <p>Service : <select name="service">""")
+for row in rows:
+    print('     <option value="' + str(row['id']) + '">' + row['name'] + '</option>')
+
+print("""    </select>
+   </p>
+   <p><input type="submit" value="Ajouter"/></p>
+  </form>
  </body>
  <footer>
   <a href="/welcome.html">Retour</a>

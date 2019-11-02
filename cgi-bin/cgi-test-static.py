@@ -21,6 +21,7 @@ print(
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
  <head>
   <title>eCarnet - Home</title>
+  <link href="/css/topcoat-desktop-light.min.css" rel="stylesheet"/>
  </head>
  <body>
   <h1>Bienvenue sur l'eCarnet</h1>
